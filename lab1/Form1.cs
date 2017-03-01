@@ -67,5 +67,16 @@ namespace lab1
         {
             backgroundWorker1.CancelAsync();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void размытиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new BlurFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
